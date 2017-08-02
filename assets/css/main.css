@@ -1,0 +1,267 @@
+body {
+  background: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+.hero-unit {
+  margin: 50px auto 0 auto;
+  width: 300px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  background-color: #eee;
+  border-radius: 6px;
+  padding: 60px;
+}
+.hero-unit h1 {
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.pure-form select {
+  height: 2.7em;
+}
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-success {
+    background: rgb(28, 184, 65); /* this is a green */
+}
+
+.button-error {
+    background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.button-warning {
+    background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.button-secondary {
+    background: rgb(66, 184, 221); /* this is a light blue */
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#walkthrough_form_image {
+  display: inline-block;
+}
+
+.mce-tinymce {
+  display: inline-block!important;
+}
+
+#form_image_src {
+  width: 251px;
+  height: auto;
+}
+
+.status {
+  position: relative;
+  display: none;
+}
+
+.form_image.list_image_close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  background-color: teal;
+  border-radius: 100%;
+}
+.form_image.list_image_close:hover {
+  opacity: 1;
+}
+.form_image.list_image_close:before, .form_image.list_image_close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.form_image.list_image_close:before {
+  transform: rotate(45deg);
+}
+.form_image.list_image_close:after {
+  transform: rotate(-45deg);
+}
+
+/*
+ by codepen: https://codepen.io/brissmyr/pen/egidw
+*/
+
+.walkthrough_team {
+  max-height: 150px;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.walkthrough_team.walkthrough_detail_open {
+  max-height: none;
+}
+
+.walkthrough_team_stage > img {
+  width: 107px;
+  height: 150px;
+}
+
+@media screen and (max-width: 767px) {
+  .walkthrough_team_stage > img {
+    display:none;
+  }
+}
+
+.walkthrough_detail_open .walkthrough_team_stage > img {
+  display: inline-block;;
+}
+
+.walkthrough_team_stage > p {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 20px;
+}
+
+.walkthrough_team_image > img{
+  width: 50%;
+  height: auto;
+  float:right;
+}
+
+.walkthrough_team_detail_btn_bg {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.walkthrough_team_detail_btn {
+  width: 100%;
+}
+
+span.badge_orange {
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    color: white;
+    background-color: rgb(223, 117, 20);
+}
+
+span.badge_blue {
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    color: white;
+    background-color: rgb(6, 124, 161);
+}
+
+span.badge_green {
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    color: white;
+    background-color: rgb(8, 164, 45);
+}
+
+.walkthrough_team_posttime {
+  padding-bottom: 30px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.walkthrough_team_image > img {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.walkthrough_team_image > img:hover {opacity: 0.7;}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#modal_caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #modal_caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+.list_image_close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.list_image_close:hover,
+.list_image_close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/*
+  edited from http://www.w3schools.com/howto/howto_css_modal_images.asp
+*/
